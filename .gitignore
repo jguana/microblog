@@ -2,3 +2,5 @@
 venv/
 *.log
 logs/
+
+app.db
