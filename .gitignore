@@ -11,3 +11,4 @@ venv
 # Specific
 app.db
 microblog.log*
+*.db
