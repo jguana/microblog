@@ -8,6 +8,7 @@ import jwt
 from app import db, login
 from app.search import add_to_index, remove_from_index, query_index
 
+
 class SearchableMixin(object):
     @classmethod
     def search(cls, expression, page, per_page):
@@ -45,6 +46,7 @@ class SearchableMixin(object):
     def reindex(cls):
         for obj in cls.query:
             add_to_index(cls.__tablename__, obj)
+
 
 db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
 db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
