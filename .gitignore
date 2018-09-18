@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python
 *.py[cod]
 __pycache__
@@ -11,4 +12,12 @@ venv
 # Specific
 app.db
 microblog.log*
+=======
+*.pyc
+venv/
+*.log
+logs/
+
+app.db
+>>>>>>> master
 *.db
